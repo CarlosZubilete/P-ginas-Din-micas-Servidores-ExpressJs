@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto ejs</title>
+</head>
+<body>
+  <h1> Lista de Productos </h1>
+  <br>
+  <br>
+    <a href="/agregarProductos">Agregar Producto</a>
+  <br>
+  <br>
+    <a href="/modificarProductos">Modificar Producto</a>
+  <br>
+  <br>
+  <ul> 
+    <% for(let i = 0 ; i<objectList.length ; i++) { %>
+      <li>
+        <h2>
+          <span># <%= objectList[i].id %> </span> 
+          <%= objectList[i].name %>
+        </h2> 
+        <p><%= objectList[i].description %></p> 
+      </li>  
+    <% } %>
+  </ul>
+
+</body>
+</html>

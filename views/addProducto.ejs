@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Producto</title>
+</head>
+<body>
+  <h1>Agregar Producto</h1>
+  <!-- el atributo "action" define la URL a la que se envían los datos del formulario cuando se envía -->
+  <form action="/agregarProductos" method="POST">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="description">Descripción</label>
+    <input type="text" id="description" name="description" required>
+    <br>
+    <button type="submit">Agregar</button>
+  </form>
+</body>
+</html>

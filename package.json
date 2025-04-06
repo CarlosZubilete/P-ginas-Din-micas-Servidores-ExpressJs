@@ -1,0 +1,18 @@
+{
+  "name": "clase-3",
+  "version": "1.0.0",
+  "description": "**Servidores Web**",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Estoy ejecutando comando dev\" & node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "3.1.10",
+    "express": "5.1.0"
+  }
+}

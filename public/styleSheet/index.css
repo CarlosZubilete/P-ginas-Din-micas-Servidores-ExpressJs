@@ -1,0 +1,179 @@
+/* HOME */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+/* Sección HOME y demás */
+body{
+  background: #081b29;
+  /* height: 100vh; */
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenedor-seccion {
+  border-top: 1px solid #00abf0;
+  border-bottom: 1px solid #00abf0;
+  /* height: 100%; */
+  padding: 20px 0;
+  margin-top:80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+  
+}  
+
+/* SECCION LEFT */
+
+.section-left {
+  background: #081b29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar contenido */
+  text-align: center;
+  padding: 20px;
+}
+
+
+.section-left img {
+  /* Evitar que creca demasiado */
+  max-width: 150px; 
+  height: auto;
+  border-radius: 10%;
+  margin: 20px;
+  object-fit: cover;
+}
+
+/* Efecto para la imagen de perfil cuando está activa en touch */
+.active-img {
+  position: relative;               
+  top: 0;
+  left: 0;
+  transform: scale(2);  
+  transition: transform 0.3s ease;
+  z-index: 1100;                 
+}
+
+.section-left h1,
+.section-left h3 {
+  width: 100%;
+  margin: 5px 0; 
+  
+}
+
+.section-left h1 {
+  color:  #ededed;
+  letter-spacing: .3rem;
+  font-family: "Rubik Dirt", serif;
+  font-size: 1.8rem;
+}
+
+.section-left h3{
+  color: #00abf0;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+}
+
+.section-left .location i{
+  color: #d93025;
+  font-size: clamp(1rem,1.5rem,1.8rem);
+}
+
+.section-left .location{
+  color: aliceblue;
+}
+
+/* ICONOS CONTENEDOR */
+.iconos-contenedor {
+  background: transparent;
+  margin: 10px 0; 
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.iconos-contenedor a {
+  position: relative;
+  text-align: center;
+  border: 1px solid #00abf0;
+  color: #00abf0;
+  font-size: 1.2rem;
+  border-radius: 40%;
+  text-decoration: none;
+  width: 20%;
+  height: 100%;
+  overflow: hidden; 
+  z-index: 1;
+  transition: .5s;
+}
+
+/* Efecto para los iconos al tocar */
+.active-icon {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  color: #081b29; 
+}
+
+.iconos-contenedor a:hover{
+  color: #081b29;
+}
+
+.iconos-contenedor a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: .6s;
+}
+
+.iconos-contenedor a:hover::before{
+  width: 100%;
+}
+
+/* SECCION RIGHT */
+.section-right {
+  background: #081b29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+.section-right h2 {
+  color:  #ededed;
+  font-family: "Rubik Dirt", serif;
+  letter-spacing: .3rem;
+  font-size: 1.8rem;
+}
+
+.section-right p{
+  color: #ededed;
+  font-size: 1.2rem;
+}
+
+
+.contenedor-skill .titulo-skill {
+  color: #ededed;
+  font-family: "Rubik Dirt", serif;
+  font-size: 1.8rem;
+  letter-spacing: .3rem;
+  border-top: 1px solid #00abf0;
+  margin-right: 15px;
+  padding-top: 10px;
+}
+
+.contenedor-skill .frond-end,
+.contenedor-skill .lenguajes{
+  margin-bottom: 2px;
+}

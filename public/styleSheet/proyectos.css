@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+/* Sección HOME y demás */
+body{
+  height: 100vh;
+  background: #081b29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ /*MIS PROYECTOS*/
+  
+.contenedor-proyectos {
+  background: #081b29;
+  padding-top: 20px;
+  border-top: 1px solid #00abf0;
+  border-bottom: 1px solid #00abf0;
+  /* height: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+   /* Asegura que el texto se centre */
+  /* text-align: center; */
+}
+
+#proyectos {
+  font-family: "Rubik Dirt", serif;
+  letter-spacing: .4rem;
+  font-size: bold;
+  color: #ededed;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+}
+
+.proyectos-contenido{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap; /* Para que los elementos no se desborden */
+    @media( max-width: 768px) {
+      align-items: center;
+    }
+
+}
+
+.proyecto-descripcion {
+  background: #081b29;
+  margin: 0 0 1rem 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.proyecto-descripcion p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.proyecto {
+  position: relative;
+  overflow: hidden; /* Evita que el overlay se desplace fuera del contenedor */
+}
+
+.proyecto img {
+  min-height: 320px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15%;
+  display: block;
+  transition: all .3s ease;
+  margin: .3rem 0 1rem 0;
+}
+
+.overlay {
+  transition: all .3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:100% ;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.proyecto:hover img {
+  opacity: .2;
+}
+
+.proyecto:hover .overlay{
+  opacity: 1;
+
+}
+
+.overlay .iconos-contenedor {
+  display: flex;
+  width: 100%;
+}
+
+.overlay .iconos-contenedor a{
+  margin: .2rem;
+  text-align: center;
+  position: relative;
+  border: 1px solid #00abf0;
+  color: #00abf0;
+  font-size: 1.2rem;
+  border-radius: 40%;
+  text-decoration: none;
+  width: 20%;
+  height: 100%;
+  overflow: hidden; 
+  z-index: 1;
+  transition: .5s;
+}
+
+.overlay .iconos-contenedor a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: .6s;
+}
+
+.overlay .iconos-contenedor a i {
+  color:#00abf0;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.overlay .iconos-contenedor a:hover::before{
+  width: 100%;
+}
+
+.overlay .iconos-contenedor a:hover i{
+  color: #081b29;
+}
